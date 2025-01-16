@@ -24,7 +24,7 @@ class _AddRestaurantState extends State<AddRestaurant> {
   var priceController = TextEditingController();
   var foodNameController = TextEditingController();
   var categoryController = TextEditingController();
-  var ratingController = TextEditingController();
+  //var ratingController = TextEditingController();
   dynamic foodImage;
   final GlobalKey<FormState> infoFormKey = GlobalKey();
 
@@ -72,7 +72,7 @@ class _AddRestaurantState extends State<AddRestaurant> {
   void _submitPost() {
     if (idController.text.isEmpty ||
         priceController.text.isEmpty ||
-        ratingController.text.isEmpty ||
+        /*ratingController.text.isEmpty ||*/
         foodNameController.text.isEmpty ||
         foodImage == null) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -88,7 +88,7 @@ class _AddRestaurantState extends State<AddRestaurant> {
       price: double.tryParse(priceController.text) ?? 0.0,
       foodImage: foodImage, // Use foodImage directly
       category: categoryController.text,
-      rating: ratingController.text,
+      //rating: ratingController.text,
     );
 
     // Call the onPostAdded callback to add the new post
@@ -99,7 +99,7 @@ class _AddRestaurantState extends State<AddRestaurant> {
     priceController.clear();
     foodNameController.clear();
     categoryController.clear();
-    ratingController.clear();
+    //ratingController.clear();
     setState(() {
       foodImage = null;
     });

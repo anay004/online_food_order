@@ -4,7 +4,7 @@ class Post {
   String? foodImage;
   double? price; // Price is a double, so make sure it's properly handled when passed/received.
   String? category;
-  String? rating;
+  //String? rating;
 
   // Constructor
   Post({
@@ -13,7 +13,7 @@ class Post {
     required this.foodName,
     required this.foodImage,
     required this.category,
-    required this.rating,
+    //required this.rating,
   });
 
   // Method to convert to JSON
@@ -24,7 +24,7 @@ class Post {
       'foodName': foodName,
       'foodImage': foodImage,
       'category': category,
-      'raring': rating,
+      //'raring': rating,
     };
   }
 
@@ -36,7 +36,7 @@ class Post {
       foodName: json['foodName'],
       foodImage: json['foodImage'],
       category: json['category'],
-      rating: json['rating'],
+      //rating: json['rating'],
     );
   }
 }

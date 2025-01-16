@@ -46,10 +46,10 @@ class _AdminDashboardState extends State<AdminDashboard> {
 
   Future<void> deleteData(String id) async {
     await postService.deletePost(id).then((_) {
-      Fluttertoast.showToast(msg: "Restaurant deleted successfully");
+      Fluttertoast.showToast(msg: "Post deleted successfully");
       loadAllData();
     }).catchError((error) {
-      Fluttertoast.showToast(msg: "Failed to delete restaurant: $error");
+      Fluttertoast.showToast(msg: "Failed to delete Post: $error");
     });
   }
 
